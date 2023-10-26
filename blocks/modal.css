@@ -1,5 +1,5 @@
 .modal {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -23,9 +23,10 @@
   box-sizing: border-box;
   background-color: white;
   padding: 34px 36px 36px;
-  border-radius: 10px;
   position: relative;
   transition: width 0.25s;
+  background-image: url("https://jooinn.com/images/white-smoke-4.png");
+  background-size: cover;
 }
 
 .modal__close-button {
@@ -51,10 +52,11 @@
 .modal__heading {
   margin: 0 calc(64px - 36px) 54px 0;
   color: #000;
-  font-size: 24px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+  text-align: center;
   height: 23px;
 }
 
@@ -65,7 +67,7 @@
   border-left: none;
   border-right: none;
   width: 100%;
-  padding: 0;
+  padding: 5px 0 0 4px;
   color: #000;
   font-size: 14px;
   font-style: normal;
@@ -73,10 +75,12 @@
   line-height: normal;
   padding-bottom: 13px;
   height: 14px;
+  border-radius: 10px;
+  background: linear-gradient(to right, white, rgb(175, 180, 187));
 }
 
 .modal__input::placeholder {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -89,7 +93,9 @@
 
 .modal__total {
   font-size: 24px;
+  color: black;
   margin: 60px 0 0 0;
+  font-weight: 600;
 }
 
 .modal__submit-button {
@@ -105,7 +111,7 @@
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 25px;
   border: none;
   transition: background-color 0.5s linear, color 0.5s ease-in;
 }

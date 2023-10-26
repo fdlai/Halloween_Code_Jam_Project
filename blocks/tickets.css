@@ -1,30 +1,78 @@
 .tickets {
   font-size: 24px;
+  margin: 50px 0;
+}
+
+.tickets__header-container {
+  background-image: url(https://orlandoparkstop.com/wp-content/uploads/2019/12/HHN_Scare_RG1_0703.jpg);
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+}
+
+.tickets__header {
+  margin: 70px 0 0 0;
+  text-align: center;
+  color: ghostwhite;
+  font-size: 52px;
 }
 
 .tickets__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.tickets__box {
+  color: black;
+  min-height: 400px;
+  border: 1px solid white;
+  /* border-radius: 15px; */
+  padding: 36px 27px;
+  /* width: 300px; */
+  background-image: url(https://www.radware.com/blog/wp-content/uploads/2020/05/ghosting-scaled.jpeg);
 }
 
 .tickets__details {
-  border: 1px solid white;
-  padding: 36px;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(70, 60, 60);
-  width: 300px;
+  background-image: url("https://images.freeimages.com/images/large-previews/f8b/thick-smoke-on-black-background-1633270.jpg");
+  background-size: 100% 100%;
+  border: none;
 }
 
 .tickets__label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+.tickets__name-container {
+  border-radius: 7px;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  box-shadow: 0 0 97px rgb(29, 29, 29);
 }
 
 .tickets__name {
-  margin-top: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  text-align: center;
+  color: darkred;
+  font-weight: 700;
+  font-size: 39px;
+}
+
+.tickets__quantity {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: darkred;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .tickets__buttons {
@@ -32,48 +80,92 @@
   justify-content: space-between;
 }
 
+.tickets__button {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(54, 54, 54);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 8px 0;
+  cursor: pointer;
+  width: 230px;
+}
+
+.tickets__button:hover {
+  opacity: 0.5;
+}
+
+.tickets__dropdown {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(54, 54, 54);
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tickets__dropdown_type_admission {
+  padding: 8px 0;
+  width: 100%;
+  min-width: 281px;
+  max-width: 322px;
+  flex-shrink: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.tickets__dropdown_type_quantity {
+  padding-left: 4px;
+  margin-right: 10px;
+}
+
 .tickets__description {
   min-height: 100px;
-}
-
-.tickets__label {
-  display: block;
-}
-
-.tickets__name {
-  margin-top: 0;
-}
-
-.tickets__buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.tickets__description {
-  min-height: 100px;
+  color: black;
+  text-shadow: 3px 1px 5px red;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
 }
 
 .tickets__cart {
-  border: 1px solid white;
-  padding: 15px;
-  border-radius: 15px;
-  padding: 36px;
-  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(70, 60, 60);
+}
+
+.tickets__title-container {
+  padding: 38px 0;
+  background-color: rgb(14, 9, 8);
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tickets__title {
-  margin-top: 0;
+  margin: 0;
+  text-align: center;
+  color: rgb(188, 188, 188);
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .tickets__list {
-  min-height: 300px;
+  margin: 0;
 }
 
-.tickets__info {
+.ticket__info {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 7px;
+}
+
+.tickets__total {
+  color: black;
+  font-size: 28px;
+  margin-top: auto;
+  font-weight: 600;
 }
 
 .ticket {
@@ -86,27 +178,19 @@
   width: 26px;
   background-color: transparent;
   border: none;
+  margin-left: 25px;
+  margin-top: 1px;
 }
 
-.tickets__title {
-  margin-top: 0;
-}
+/* @media screen and (max-width: 960px) {
+  .tickets__content {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
 
-.tickets__list {
-  min-height: 300px;
-}
-
-.tickets__info {
-}
-
-.ticket {
-  display: flex;
-}
-
-.ticket__remove-button {
-  background-image: url(../images/close-button.svg);
-  height: 26px;
-  width: 26px;
-  background-color: transparent;
-  border: none;
-}
+  .tickets__box {
+    width: 100%;
+    min-height: 0;
+  }
+} */

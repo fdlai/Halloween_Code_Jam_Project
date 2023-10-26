@@ -35,7 +35,7 @@
         <!-- --------------------------- Events Section ---------------------------- -->
         <section class="events" id="events">
           <div class="events__title-container">
-            <h2 class="events__title">Events</h2>
+            <h2 class="events__title">Our Special Events</h2>
           </div>
           <ul class="events__list">
             <li class="event">
@@ -121,12 +121,19 @@
         </section>
         <!-- --------------------------- Tickets Section --------------------------- -->
         <section class="tickets" id="tickets">
-          <h2 class="tickets__header">Get Tickets</h2>
+          <div class="tickets__header-container">
+            <h2 class="tickets__header">Get Tickets</h2>
+          </div>
           <div class="tickets__content">
-            <div class="tickets__details" id="ticket-details">
+            <div class="tickets__details tickets__box" id="ticket-details">
               <label class="tickets__label" for="ticket-type">
-                <p class="tickets__name">Select a Ticket:</p>
-                <select id="ticket-type">
+                <div class="tickets__name-container">
+                  <p class="tickets__name">Select a Ticket</p>
+                </div>
+                <select
+                  class="tickets__dropdown tickets__dropdown_type_admission"
+                  id="ticket-type"
+                >
                   <option value="General Admission">
                     General Admission ($35)
                   </option>
@@ -138,9 +145,13 @@
                 attractions.
               </p>
               <label class="tickets__label" for="quantity">
-                <p class="tickets__name">Quantity:</p>
+                <p class="tickets__quantity">Quantity:</p>
                 <div class="tickets__buttons">
-                  <select id="quantity" name="quantity">
+                  <select
+                    class="tickets__dropdown tickets__dropdown_type_quantity"
+                    id="quantity"
+                    name="quantity"
+                  >
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -152,17 +163,24 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                   </select>
-                  <button id="add-to-cart">Add to Cart</button>
+                  <button class="tickets__button" id="add-to-cart">
+                    Add to Cart
+                  </button>
                 </div>
               </label>
             </div>
-            <div class="tickets__cart" id="cart">
-              <h2 class="tickets__title">Shopping Cart</h2>
+            <div class="tickets__cart tickets__box" id="cart">
+              <div class="tickets__title-container">
+                <h2 class="tickets__title">Shopping Cart</h2>
+              </div>
               <ul class="tickets__list" id="cart-items">
                 <!-- Cart items will be displayed here -->
               </ul>
               <p class="tickets__total">Total: $00.00</p>
-              <button class="tickets__checkout-button" disabled="true">
+              <button
+                class="tickets__button tickets__checkout-button"
+                disabled="true"
+              >
                 Checkout
               </button>
             </div>
