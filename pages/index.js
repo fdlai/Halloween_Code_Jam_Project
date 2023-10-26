@@ -12,6 +12,10 @@ const checkoutModal = document.querySelector("#modal-checkout");
 const modalTotal = document.querySelector(".modal__total");
 const ticketTemplate =
   document.querySelector("#ticket-template").content.firstElementChild;
+const checkoutModalForm = checkoutModal.querySelector(".modal__form");
+const checkoutModalSubmitButton = document.querySelector(
+  ".modal__submit-button"
+);
 /* -------------------------------------------------------------------------- */
 /*                                  Functions                                 */
 /* -------------------------------------------------------------------------- */
@@ -21,6 +25,10 @@ function handleCheckoutButtonState() {
   } else {
     checkoutButton.disabled = false;
   }
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
 }
 
 function addToCart() {
@@ -75,6 +83,26 @@ function calculateTotal() {
   const nums = text.match(/(?<=\$)\d+/g).map(parseFloat);
   return nums.reduce((a, b) => a + b);
 }
+
+async function purchaseTickets() {
+  try {
+    console.log("Sending data to the server...");
+
+    //display loading animation
+
+    // Simulate a delay using setTimeout
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log("Data received from the server");
+
+    //display thank you message
+
+    // Simulate receiving a response
+    const response = { message: "Tickets purchased successfully" };
+    console.log("Response:", response);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
 /* -------------------------------------------------------------------------- */
 /*                               Event Listeners                              */
 /* -------------------------------------------------------------------------- */
@@ -99,7 +127,15 @@ checkoutButton.addEventListener("click", () => {
 });
 
 checkoutModal.addEventListener("mousedown", (e) => {
-  if (e.target === e.currentTarget) {
-    checkoutModal.classList.remove("modal_opened");
+  if (
+    e.target === e.currentTarget ||
+    e.target.classList.contains("modal__close-button")
+  ) {
+    closeModal(checkoutModal);
   }
+});
+
+checkoutModalForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  purchaseTickets();
 });

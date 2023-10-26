@@ -17,6 +17,26 @@
   pointer-events: auto;
 }
 
+.modal__close-button {
+  background-image: url(../images/filled-close-button.png);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: opacity 0.25s;
+}
+
+.modal__close-button:hover {
+  opacity: 0.6;
+}
+
 .modal__container {
   margin: auto; /*display flex needed on parent container*/
   width: 430px;
@@ -27,26 +47,6 @@
   transition: width 0.25s;
   background-image: url("https://jooinn.com/images/white-smoke-4.png");
   background-size: cover;
-}
-
-.modal__close-button {
-  /* background-image: url(../images/Close-Icon.svg); */
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  bottom: calc(100% + 5px);
-  left: calc(100% + 5px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.25s;
-}
-
-.modal__close-button:hover {
-  opacity: 0.6;
 }
 
 .modal__heading {
