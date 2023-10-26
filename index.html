@@ -91,7 +91,7 @@
         <!-- ------------------------- Merchandise Section ------------------------- -->
         <section class="merchandise" id="merchandise">
           <h2 class="merch__title">Check out our Merchandise!</h2>
-          <p class="merch__subtitle">Available for purchase in person</p>
+          <p class="merch__subtitle">Available for purchase on site</p>
           <div class="slider__wrapper">
             <div class="slider">
               <img
@@ -221,9 +221,55 @@
         </section>
       </main>
       <!-- ------------------------------- Footer -------------------------------- -->
-      <footer class="footer"></footer>
+      <footer id="contact" class="footer">
+        <div class="footer__columns">
+          <div class="footer__column">
+            <img
+              class="footer__logo"
+              src="./images/13th-gate-logo.png"
+              alt="logo"
+            />
+          </div>
+          <div class="footer__column footer__column_content_social">
+            <h2 class="footer__column-heading">Social Media</h2>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__column-link">
+                  <img
+                    class="footer__social-icon"
+                    src="./images/facebook-circle.svg"
+                    alt="facebook icon"
+                  />
+                  Facebook
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__column-link">
+                  <img
+                    class="footer__social-icon"
+                    src="./images/insta-logo-svg.png"
+                    alt="Instagram logo"
+                  />
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copyright">&copy; Triple Ten</p>
+      </footer>
+      <!-- --------------------------- Checkout Modal ---------------------------- -->
       <div class="modal" id="modal-checkout">
         <div class="modal__container">
+          <div class="modal__loading-container">
+            <div class="modal__loading"></div>
+          </div>
+          <div class="modal__purchase-complete-container">
+            <p class="modal__purchase-complete-message">Order Complete.</p>
+            <p class="modal__purchase-complete-message">
+              Thank you for your purchase!
+            </p>
+          </div>
           <button
             class="modal__close-button"
             type="button"
@@ -280,6 +326,7 @@
         </div>
       </div>
     </div>
+    <!-- --------------------------- Ticket Template --------------------------- -->
     <template id="ticket-template">
       <div class="ticket">
         <li class="ticket__info">General Admission x1 - Price: $35.00</li>

@@ -9,12 +9,19 @@ const cartItemsList = document.querySelector(".tickets__list");
 const ticketsTotal = document.querySelector(".tickets__total");
 const checkoutButton = document.querySelector(".tickets__checkout-button");
 const checkoutModal = document.querySelector("#modal-checkout");
+const checkoutModalContainer = checkoutModal.querySelector(".modal__container");
 const modalTotal = document.querySelector(".modal__total");
 const ticketTemplate =
   document.querySelector("#ticket-template").content.firstElementChild;
 const checkoutModalForm = checkoutModal.querySelector(".modal__form");
 const checkoutModalSubmitButton = document.querySelector(
   ".modal__submit-button"
+);
+const modalLoadingContainer = checkoutModal.querySelector(
+  ".modal__loading-container"
+);
+const modalPurchaseCompleteContainer = checkoutModal.querySelector(
+  ".modal__purchase-complete-container"
 );
 /* -------------------------------------------------------------------------- */
 /*                                  Functions                                 */
@@ -29,6 +36,24 @@ function handleCheckoutButtonState() {
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+}
+
+function detectModalOverlayClick(event) {
+  return (
+    event.target === event.currentTarget ||
+    event.target.classList.contains("modal__close-button")
+  );
+}
+
+function resetCheckoutModalForm(e) {
+  if (detectModalOverlayClick(e)) {
+    checkoutModalForm.reset();
+    modalPurchaseCompleteContainer.classList.remove(
+      "modal__purchase-complete-container_opened"
+    );
+    //remove event listener to prevent memory leak
+    checkoutModal.removeEventListener("mousedown", resetCheckoutModalForm);
+  }
 }
 
 function addToCart() {
@@ -88,13 +113,21 @@ async function purchaseTickets() {
   try {
     console.log("Sending data to the server...");
 
-    //display loading animation
+    // Display loading animation
+    modalLoadingContainer.classList.add("modal__loading-container_opened");
 
     // Simulate a delay using setTimeout
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 4000));
     console.log("Data received from the server");
 
-    //display thank you message
+    // Display thank you message
+    modalLoadingContainer.classList.remove("modal__loading-container_opened");
+    modalPurchaseCompleteContainer.classList.add(
+      "modal__purchase-complete-container_opened"
+    );
+
+    // Listener to reset the form the next time it's closed
+    checkoutModal.addEventListener("mousedown", resetCheckoutModalForm);
 
     // Simulate receiving a response
     const response = { message: "Tickets purchased successfully" };
@@ -127,10 +160,7 @@ checkoutButton.addEventListener("click", () => {
 });
 
 checkoutModal.addEventListener("mousedown", (e) => {
-  if (
-    e.target === e.currentTarget ||
-    e.target.classList.contains("modal__close-button")
-  ) {
+  if (detectModalOverlayClick(e)) {
     closeModal(checkoutModal);
   }
 });
