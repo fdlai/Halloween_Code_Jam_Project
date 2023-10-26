@@ -61,3 +61,12 @@
   opacity: 1;
   cursor: pointer;
 }
+
+@media screen and (max-width: 650px) {
+  .merchandise {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+}

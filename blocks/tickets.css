@@ -184,15 +184,34 @@
   margin-top: 1px;
 }
 
-/* @media screen and (max-width: 960px) {
-  .tickets__content {
-    flex-direction: column;
-    row-gap: 20px;
+@media screen and (max-width: 650px) {
+  .tickets__header-container {
+    height: 250px;
     align-items: center;
   }
 
-  .tickets__box {
-    width: 100%;
-    min-height: 0;
+  .tickets__header {
+    margin: 0;
+    font-size: 42px;
   }
-} */
+
+  .tickets__name {
+    font-size: 30px;
+  }
+
+  .tickets__description {
+    font-size: 22px;
+  }
+
+  .tickets__dropdown {
+    font-size: 22px;
+  }
+
+  .tickets__button {
+    font-size: 22px;
+  }
+
+  .tickets__title {
+    font-size: 28px;
+  }
+}

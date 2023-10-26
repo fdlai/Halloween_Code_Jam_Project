@@ -16,10 +16,27 @@
 }
 
 .event__name {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .event__description {
   margin: 0;
   text-align: center;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 500px) {
+  .event {
+    padding: 10px;
+  }
+
+  .event__name {
+    font-size: 24px;
+  }
+
+  .event__description {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+  }
 }

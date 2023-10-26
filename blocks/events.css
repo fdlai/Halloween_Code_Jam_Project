@@ -1,7 +1,7 @@
 .events {
   font-family: "Carrois Gothic", sans-serif;
   position: relative;
-  padding: 25px;
+  padding: 25px 0;
 }
 
 /* .events::before {
@@ -57,3 +57,13 @@
   background-size: cover;
   z-index: -1;
 } */
+
+@media screen and (max-width: 500px) {
+  .events__title-container {
+    padding: 35px 0;
+  }
+
+  .events__title {
+    font-size: 32px;
+  }
+}
