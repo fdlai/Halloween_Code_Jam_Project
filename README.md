@@ -28,4 +28,4 @@ Plans to add:
 
 **Github pages**
 
-- [Link to the project on Github pages](https://fdlai.github.io/se_project_aroundtheus/)
+- [Link to the project on Github pages](https://fdlai.github.io/Halloween_Code_Jam_Project/)

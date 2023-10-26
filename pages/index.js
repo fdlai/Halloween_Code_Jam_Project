@@ -61,12 +61,8 @@ function addToCart() {
   let ticketPrice;
   if (ticketName === "General Admission") {
     ticketPrice = 35;
-    ticketsDescription.textContent =
-      "General Admission access to the 13th Gate Haunted House and all attractions.";
   } else {
     ticketPrice = 75;
-    ticketsDescription.textContent =
-      "Immediate Access to the 13th Gate Haunted House. VIP allows you to skip Haunted House OUTSIDE line.";
   }
 
   const selectedQuantity = quantityDropdown.value;
@@ -143,7 +139,7 @@ ticketPriceDropdown.addEventListener("change", () => {
   const ticketName = ticketPriceDropdown.value;
   if (ticketName === "General Admission") {
     ticketsDescription.textContent =
-      "General Admission access to the 13th Gate Haunted House and all attractions.";
+      "General Admission access to the 13th Gate Haunted House and all attractions. 1 ticket per day. No refunds.";
   } else {
     ticketsDescription.textContent =
       "Immediate Access to the 13th Gate Haunted House. VIP allows you to skip Haunted House OUTSIDE line.";
@@ -151,7 +147,7 @@ ticketPriceDropdown.addEventListener("change", () => {
 });
 
 addToCartButton.addEventListener("click", () => {
-  addToCart("General Admission", 35);
+  addToCart();
 });
 
 checkoutButton.addEventListener("click", () => {
