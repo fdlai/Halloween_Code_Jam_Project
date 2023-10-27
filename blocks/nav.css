@@ -1,15 +1,22 @@
 .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: grey;
+  background-image: url("https://thumbs.dreamstime.com/b/grunge-paper-vintage-whith-blood-16701532.jpg");
+  background-size: cover;
   padding: 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   z-index: 2;
+  /* opacity: 0; */
 }
+
+/* .nav:hover {
+  opacity: 1;
+} */
 
 .nav__links {
   margin: 0;
@@ -22,7 +29,8 @@
 
 .nav__link {
   text-decoration: none;
-  color: white;
   font-size: 20px;
   font-weight: 800;
+  color: black;
+  text-shadow: 3px 1px 5px rgb(152, 137, 167);
 }

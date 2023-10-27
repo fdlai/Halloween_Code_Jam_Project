@@ -4,7 +4,7 @@ Project name: Halloween_Code_Jam_Project
 
 ## Project info
 
-This project is devoloped for a Triple-Ten code jam over a 2-3 day period. Our 3 team members are: Fred Lai, Jaxson Zane, and Albert M. We have developed a webpage to promote a Halloween attraction. The attraction is partially made-up and partially based on a real attraction called The 13th Gate.
+This project is devoloped for a Triple-Ten code jam over a 2-3 day period. Our 3 team members are: [Fred Lai](https://github.com/fdlai/), [Jaxson Tanner](https://github.com/Jaxsonzane), and [Albert Martinez](https://github.com/ialbertmartinez). We have developed a webpage to promote a Halloween attraction. The attraction is partially made-up and partially based on a real attraction called The 13th Gate.
 
 ## Project features
 
