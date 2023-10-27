@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hca4swo.css" />
     <link rel="stylesheet" href="./pages/index.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap");
@@ -12,33 +13,35 @@
   <body class="page">
     <div class="page__content">
       <!-- ------------------------------- Header -------------------------------- -->
+      <nav class="nav">
+        <img
+          class="nav__logo"
+          src="./images/13th_gate_logo-01.png"
+          alt="13th Gate Logo"
+        />
+        <ul class="nav__links">
+          <li>
+            <a href="#events" class="nav__link">Events</a>
+          </li>
+          <li>
+            <a href="#merchandise" class="nav__link">Merchandise</a>
+          </li>
+          <li>
+            <a href="#tickets" class="nav__link">Tickets</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
       <header class="header">
-        <nav class="nav">
-          <img
-            src="https://13thgate.com/wp-content/uploads/2019/01/footer-13th-gate.png"
-            alt="13th Gate Logo"
-          />
-          <ul class="nav__links">
-            <li>
-              <a href="#events" class="nav__link">Events</a>
-            </li>
-            <li>
-              <a href="#merchandise" class="nav__link">Merchandise</a>
-            </li>
-            <li>
-              <a href="#tickets" class="nav__link">Tickets</a>
-            </li>
-            <li>
-              <a href="#contact" class="nav__link">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- <h1 class="header__title">Welcome to</h1> -->
-        <div class="header__image-container"><img class="header__image" /></div>
-        <p class="header__description">
-          Get ready for the ultimate Halloween thrill at our Horror Park of
-          Nightmares!
-        </p>
+        <p class="header__intro">You are invited to</p>
+        <h1 class="header__title">
+          <span class="header__dropcap">13</span
+          ><sup class="header__sup">th</sup>
+          <span class="header__text">Gate</span>
+        </h1>
+        <p class="header__subtitle">Haunted House</p>
       </header>
       <main class="content">
         <!-- --------------------------- Events Section ---------------------------- -->

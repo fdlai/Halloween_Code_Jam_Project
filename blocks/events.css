@@ -26,6 +26,7 @@
   box-shadow: 25px 25px 150px 0 rgb(29, 29, 29) inset,
     -25px -25px 150px 0 rgb(29, 29, 29) inset;
   border-radius: 40px;
+  margin-top: 181px;
 }
 
 .events__title {

@@ -1,20 +1,19 @@
-.header {
+/* .header {
   padding-top: 105px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .header__image-container {
-  max-height: 363px;
-  max-width: 790px;
   margin: 61px auto 0 auto;
-}
-
-.header__image {
   background-image: url("https://13thgate.com/wp-content/uploads/2019/01/13th-gate-logo.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 90vw;
+  height: 50vh;
+  border: none;
+}
+
+.header__image {
 }
 
 .header__title {
@@ -29,4 +28,4 @@
   text-align: center;
   font-size: 23px;
   margin-bottom: 100px;
-}
+} */
