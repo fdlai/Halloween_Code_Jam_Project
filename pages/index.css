@@ -186,7 +186,8 @@
   margin-top: 37px;
   color: white;
   font-family: tiller, sans-serif;
-  font-size: 1em;
+  font-size: 2em;
+  letter-spacing: 10px;
 }
 
 .header__dropcap {
